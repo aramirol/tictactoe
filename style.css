@@ -1,0 +1,150 @@
+body {
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 30px;
+  color: #008f58;
+}
+
+.dark-mode h1 {
+  color: #fff;
+}
+
+#scoreboard {
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#scoreboard th {
+  background-color: #f9f9f9;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#scoreboard td {
+  padding: 10px;
+  text-align: center;
+}
+
+#scoreboard td span {
+  font-size: 24px;
+}
+
+#board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 320px;
+  margin: 0 auto;
+  margin-top: 50px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+.cell:hover {
+  background-color: #e3e3e3;
+}
+
+.cell.x {
+  background-color: #2196f3; /* Blue to X */
+  color: #fff; /* White to text mark */
+}
+
+.cell.o {
+  background-color: #f44336; /* Red to O */
+  color: #fff; /* White to text mark */
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #008f58;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #008f58;
+}
+
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode #scoreboard th {
+  background-color: #555;
+}
+
+.dark-mode #scoreboard td {
+  background-color: #555;
+  color: #fff;
+}
+
+.dark-mode #scoreboard td span {
+  color: #fff;
+}
+
+.dark-mode .cell {
+  background-color: #555;
+  border-color: #666;
+}
+
+.dark-mode .cell.x {
+  background-color: #2196f3; /* Blue to X */
+  color: #fff; /* White to text mark */
+}
+
+.dark-mode .cell.o {
+  background-color: #f44336; /* Red to O */
+  color: #fff; /* White to text mark */
+}
+
+.dark-mode .cell:hover {
+  background-color: #777;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #f5f5f5;
+  padding: 10px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.dark-mode footer {
+  background-color: #333;
+  color: #fff;
+}
