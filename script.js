@@ -11,13 +11,13 @@ function placeSymbol(index) {
     cell.classList.add(currentPlayer.toLowerCase()); // Add class to colour
     if (checkWin()) {
       setTimeout(function() {
-        alert(currentPlayer + ' ha ganado!');
+        alert(currentPlayer + ' has won!');
         updateScore();
         resetBoard();
       }, 100);
     } else if (board.indexOf('') === -1) {
       setTimeout(function() {
-        alert('¡Empate!');
+        alert('Tied!');
         resetBoard();
       }, 100);
     } else {
