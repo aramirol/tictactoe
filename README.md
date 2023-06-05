@@ -16,13 +16,17 @@ This game was develeped using **[ChatGPT](https://openai.com/chatgpt)**.
 
 ## How to
 
-Use the Dockerfile to quickly deploy the game. The image used is nginxinc/nginx-unprivileged, an nginx that does not run as root and exposes port 8080, instead of the traditional 80.
+Use the `Dockerfile` to quickly deploy the game. The image used is nginxinc/nginx-unprivileged, an nginx that does not run as root and exposes port 8080, instead of the traditional 80.
 
 ```sh
 $ sudo docker run -d -p 8080:8080 aramirol/tictactoe:latest
 ```
 
-If you prefer, you can use the deployment.yaml file to deploy the game to Kubernetes. This file creates all the necessary components (remember to change the values to fit your environment)
+If you prefer, you can use the `deployment.yaml` file to deploy the game to Kubernetes. This file creates all the necessary components (remember to change the values to fit your environment)
+
+```sh
+$ kubectl apply -f deployment.yaml
+```
 
 ```yml
 spec:
