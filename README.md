@@ -2,6 +2,7 @@
 
 [![Docker Image CI](https://github.com/aramirol/tictactoe/actions/workflows/docker-image.yml/badge.svg)](https://github.com/aramirol/tictactoe/actions/workflows/docker-image.yml)
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=aramirol_tictactoe&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=aramirol_tictactoe)
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=aramirol_tictactoe&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=aramirol_tictactoe)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=aramirol_tictactoe&metric=bugs)](https://sonarcloud.io/summary/new_code?id=aramirol_tictactoe)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=aramirol_tictactoe&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=aramirol_tictactoe)
