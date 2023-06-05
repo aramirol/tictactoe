@@ -12,6 +12,6 @@ This game was develeped using ChatGPT.
 
 ## License
 
-[![GitHub](https://img.shields.io/github/license/aramirol/tictactoe)](https://github.com/aramirol/jenkins-custom/blob/main/LICENSE)
+[![GitHub](https://img.shields.io/github/license/aramirol/tictactoe)](https://github.com/aramirol/tictactoe/blob/main/LICENSE)
 
-See [LICENSE](https://github.com/aramirol/jenkins-custom/blob/main/LICENSE) to see the full text.
+See [LICENSE](https://github.com/aramirol/tictactoe/blob/main/LICENSE) to see the full text.
