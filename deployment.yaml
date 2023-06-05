@@ -1,0 +1,70 @@
+---
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: tictactoe
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: tictactoe-service
+  namespace: tictactoe
+spec:
+  selector:
+    app: tictactoe-app
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+  type: ClusterIP
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tictactoe-deployment
+  namespace: tictactoe
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tictactoe-app
+  template:
+    metadata:
+      labels:
+        app: tictactoe-app
+    spec:
+      containers:
+        - name: tictactoe
+          image: aramirol/tictactoe:latest
+          ports:
+            - containerPort: 8080
+
+---
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: tictactoe-ingress
+  namespace: tictactoe
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/backend-protocol: http
+    nginx.ingress.kubernetes.io/secure-backends: "false"
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: tictactoe.casare.int
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: tictactoe-service
+            port:
+              number: 8080
